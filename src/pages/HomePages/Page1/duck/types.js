@@ -1,0 +1,3 @@
+export const PAGE1_REQUEST='@PAGE1RQUEST';
+export const PAGE1_SUCCESS='@PAGE1SUCCESS';
+export const PAGE1_FAIL='@PAGE1FAIL';

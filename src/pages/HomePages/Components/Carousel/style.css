@@ -1,0 +1,32 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    transition: transform 2s ease, opacity .5s ease-out
+}
+
+.customCarousel .carousel-inner {
+    
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center; 
+    align-items: center;
+      
+}
+
+.customCarousel .carousel-inner .overlay{
+    background: rgba(32, 32, 32, 0.65);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+

@@ -1,0 +1,3 @@
+export const AUTH_REQUEST='@AUTHREQUEST';
+export const AUTH_SUCCESS='@AUTHSUCCESS';
+export const AUTH_FAIL='@AUTHFAIL';
