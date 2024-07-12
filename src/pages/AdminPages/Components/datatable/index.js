@@ -13,6 +13,7 @@ const DataTable = (props) => {
   const dispatch = useDispatch();
   const [showUpdate, setShowUpdate] = useState(false);
   const [screen, setscreen] = useState('');
+  const [page, setsortpage] = useState('');
 
   const handleDelete = (id) => {
     api.delete(`/quan-ly-hinh-anh/${id}`)
@@ -34,7 +35,14 @@ const DataTable = (props) => {
       return item.manhinh === screen;
     } else {
       return item;
-    };
+    }
+  })
+  dataIMG = dataIMG?.filter((item) => {
+    if (page) {
+      return item.page === page;
+    } else {
+      return item;
+    }
   })
 
   const columns = [
@@ -102,7 +110,7 @@ const DataTable = (props) => {
     <>
       {/* <ImageUpload /> */}
       <ModalUpdate setShow={setShowUpdate} show={showUpdate} initialValues={data} />
-      <ModalComponent setscreen={setscreen} />
+      <ModalComponent setscreen={setscreen} setsortpage={setsortpage} />
       <Table columns={columns} dataSource={dataIMG} />
     </>
   );

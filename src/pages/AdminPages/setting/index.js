@@ -1,7 +1,8 @@
-import { Popconfirm, Table, Button,Form,Modal,Input } from 'antd'
+import { Popconfirm, Table, Button, Form, Modal, Input, Image } from 'antd'
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import * as ActionType from './duck/types';
+
 
 export default function Setting() {
   let { Navlink, manhinh } = useSelector((state) => state.settingReducer);
@@ -60,6 +61,14 @@ export default function Setting() {
       dataIndex: 'icon',
       key: 'icon'
     }, {
+      title: 'Background Trang',
+      dataIndex: 'background',
+      key: 'background',
+      render: (background) => <Image
+        width={50}
+        src={background}
+      />
+    }, {
       title: 'Action',
       dataIndex: 'id',
       key: 'id',
@@ -80,7 +89,7 @@ export default function Setting() {
         <button onClick={handleSubmit}>Submit</button>
       </div>
 
-   
+
 
       <Table columns={columns} dataSource={link} />
 
@@ -125,6 +134,14 @@ export default function Setting() {
               name="icon"
               label="Icon"
               rules={[{ required: true, message: 'Vui lòng nhập icon!' }]}
+            >
+              <Input />
+            </Form.Item>
+
+            <Form.Item
+              name="background"
+              label="Background"
+              rules={[{ required: false, message: 'Vui lòng nhập background!' }]}
             >
               <Input />
             </Form.Item>

@@ -3,7 +3,7 @@ import { actAddImages } from './duck/action';
 import { Modal, Button, Form,Dropdown, DropdownButton } from 'react-bootstrap';
 import { useDispatch } from 'react-redux';
 
-const ModalComponent = ({setscreen}) => {
+const ModalComponent = ({setscreen,setsortpage}) => {
   const [show, setShow] = useState(false);
   const [file, setFile] = useState(null);
   const [kichthuoc, setKickthuoc] = useState('');
@@ -50,8 +50,13 @@ const ModalComponent = ({setscreen}) => {
   const handleSort = (key) => {
     // Xử lý khi chọn một tùy chọn sắp xếp
     setscreen(key)
+  };
+  const handleSortPage = (key) => {
+    // Xử lý khi chọn một tùy chọn sắp xếp
+    setsortpage(key)
  
   };
+  
   
   return (
     <>
@@ -60,6 +65,7 @@ const ModalComponent = ({setscreen}) => {
           Thêm Ảnh
         </Button>
 
+        
         <DropdownButton id="dropdown-basic-button" title="Màn Hình" className="mx-auto">
         <Dropdown.Item onClick={() => handleSort('')}>Tất Cả</Dropdown.Item>
           <Dropdown.Item onClick={() => handleSort('1')}>1</Dropdown.Item>
@@ -73,6 +79,21 @@ const ModalComponent = ({setscreen}) => {
           <Dropdown.Item onClick={() => handleSort('9')}>9</Dropdown.Item>
           <Dropdown.Item onClick={() => handleSort('10')}>10</Dropdown.Item>
         </DropdownButton>
+
+        <DropdownButton id="dropdown-button-page" title="Page" className="mx-auto">
+        <Dropdown.Item onClick={() => handleSortPage('')}>Tất Cả</Dropdown.Item>
+          <Dropdown.Item onClick={() => handleSortPage('1')}>1</Dropdown.Item>
+          <Dropdown.Item onClick={() => handleSortPage('2')}>2</Dropdown.Item>
+          <Dropdown.Item onClick={() => handleSortPage('3')}>3</Dropdown.Item>
+          <Dropdown.Item onClick={() => handleSortPage('4')}>4</Dropdown.Item>
+          <Dropdown.Item onClick={() => handleSortPage('5')}>5</Dropdown.Item>
+          <Dropdown.Item onClick={() => handleSortPage('6')}>6</Dropdown.Item>
+          <Dropdown.Item onClick={() => handleSortPage('7')}>7</Dropdown.Item>
+          <Dropdown.Item onClick={() => handleSortPage('8')}>8</Dropdown.Item>
+          <Dropdown.Item onClick={() => handleSortPage('9')}>9</Dropdown.Item>
+          <Dropdown.Item onClick={() => handleSortPage('10')}>10</Dropdown.Item>
+        </DropdownButton>
+
       </div>
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>

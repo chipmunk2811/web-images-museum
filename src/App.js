@@ -1,23 +1,24 @@
 import { Suspense } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes,Route } from 'react-router-dom';
 import './App.css';
 import Loader from './pages/Loader';
-import HomePage from './pages/HomePages/index';
-import Page1 from './pages/HomePages/Page1';
-import Page2 from './pages/HomePages/Page2';
-import Page3 from './pages/HomePages/Page3';
-import Page4 from './pages/HomePages/Page4';
-import Page5 from './pages/HomePages/Page5';
-import Page6 from './pages/HomePages/Page6';
-import Page7 from './pages/HomePages/Page7';
-import Page8 from './pages/HomePages/Page8';
-import Page9 from './pages/HomePages/Page9';
 
-import Login from './pages/AdminPages/Login/index';
+// import HomePage from './pages/HomePages/index';
+// import Page1 from './pages/HomePages/Page1';
+// import Page2 from './pages/HomePages/Page2';
+// import Page3 from './pages/HomePages/Page3';
+// import Page4 from './pages/HomePages/Page4';
+// import Page5 from './pages/HomePages/Page5';
+// import Page6 from './pages/HomePages/Page6';
+// import Page7 from './pages/HomePages/Page7';
+// import Page8 from './pages/HomePages/Page8';
+// import Page9 from './pages/HomePages/Page9';
 
-import AdminPage from './pages/AdminPages/index';
-import Images from './pages/AdminPages/images/index';
-import Setting from './pages/AdminPages/setting/index';
+// import Login from './pages/AdminPages/Login/index';
+
+// import AdminPage from './pages/AdminPages/index';
+// import Images from './pages/AdminPages/images/index';
+// import Setting from './pages/AdminPages/setting/index';
 
 import renderRoutes from './routers/index';
 function App() {
